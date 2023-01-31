@@ -3,12 +3,12 @@ pipeline{
         stages{
             stage("vcs"){
                 steps{
-                    git url:"https://github.com/siri1418/jenskins-ansible-integration.git",
+                    git url: "https://github.com/siri1418/jenskins-ansible-integration.git",
                     branch: main
 
                 }
             }
-            stage("installing apache using palybook"){
+            stage("installing apache using playbook"){
                 steps{
                     sh 'ansible-playbook -i hosts apacheplaybook.yaml'
                 }
