@@ -4,7 +4,7 @@ pipeline{
             stage("vcs"){
                 steps{
                     git url: "https://github.com/siri1418/jenskins-ansible-integration.git",
-                    branch: main
+                    branch: "main"
 
                 }
             }
