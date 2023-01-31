@@ -1,6 +1,6 @@
 pipeline{
     agent{label "ubuntu"}
-        satges{
+        stages{
             stage("vcs"){
                 steps{
                     git url:"https://github.com/siri1418/jenskins-ansible-integration.git",
