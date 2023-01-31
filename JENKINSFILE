@@ -1,0 +1,18 @@
+pipeline{
+    agent{label "ubuntu"}
+        satges{
+            stage("vcs"){
+                steps{
+                    git url:"https://github.com/siri1418/jenskins-ansible-integration.git",
+                    branch: main
+
+                }
+            }
+            stage("installing apache using palybook"){
+                steps{
+                    sh 'ansible-playbook -i hosts apacheplaybook.yaml'
+                }
+            }
+        }
+    
+}
